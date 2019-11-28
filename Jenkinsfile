@@ -3,7 +3,7 @@ node('master') {
     stage('Testing') {
 
     
-      steps {
+      step {
              printMessage('run test pipeline')
           sh 'python test_sum.py'
                  sh 'cd test'
