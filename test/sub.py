@@ -1,6 +1,6 @@
 import unittest
 
-from sum import *
+from subtract import *
 
 class TestSum(unittest.TestCase):
 
