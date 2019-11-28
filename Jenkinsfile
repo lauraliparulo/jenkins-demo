@@ -7,7 +7,7 @@ node('master') {
             }
              
              printMessage('Tests completed')
-        }
+        
     }
 }
 
