@@ -1,8 +1,8 @@
 node('master') {
 
     dir('test') {
+         printMessage('run pipeline')
         stage('Testing') {
-            steps {
                 sh 'python subtraction-tests.py'
             }
              
