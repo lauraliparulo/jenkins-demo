@@ -5,8 +5,7 @@ pipeline {
             steps {
                    printMessage('run test pipeline')
            sh 'python test_sum.py'
-            sh 'cd test'
-            sh 'python sub.py'
+            sh 'python test/sub.py'
            printMessage('Tests completed')
             }
         }
