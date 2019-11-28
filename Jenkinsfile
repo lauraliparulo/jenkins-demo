@@ -3,7 +3,7 @@ node('master') {
     dir('test') {
         stage('Testing') {
             steps {
-                sh 'python test_subtraction.py'
+                sh 'python subtraction-tests.py'
             }
              
              printMessage('Tests completed')
