@@ -1,5 +1,9 @@
 node('master') {
 
+    stage('Testing') {
+                sh 'python test_sum.py'
+            }
+    
     dir('test') {
          printMessage('run pipeline')
         stage('Testing') {
