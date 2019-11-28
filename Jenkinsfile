@@ -1,14 +1,14 @@
 node('master') {
 
     stage('Testing') {
-                sh 'python test_sum.py'
-            }
+   printMessage('run test pipeline')
     
-    dir('test') {
-         printMessage('run pipeline')
-        stage('Testing') {
-                sh 'python subtraction-tests.py'
-            }
+      steps {
+          sh 'python test_sum.py'
+                 sh 'cd test'
+               sh 'python subtraction-tests.py'
+             }
+   
              
              printMessage('Tests completed')
         
