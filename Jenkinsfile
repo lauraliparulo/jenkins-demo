@@ -3,7 +3,7 @@ node('master') {
     dir('test') {
          printMessage('run pipeline')
         stage('Testing') {
-                sh 'python test/subtraction-tests.py'
+                sh 'python subtraction-tests.py'
             }
              
              printMessage('Tests completed')
