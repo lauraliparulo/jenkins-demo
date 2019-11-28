@@ -1,12 +1,16 @@
-pipeline {
-     agent {
-    label 'docker' 
-          }
-    stages {
-        stage('build') {
+node('master') {
+
+    dir('test') {
+        stage('Testing') {
             steps {
-                sh 'python --version'
+                sh 'python test_subtraction.py'
             }
+             
+             printMessage('Tests completed')
         }
     }
+}
+
+def printMessage(message){
+     echo "${message}"
 }
